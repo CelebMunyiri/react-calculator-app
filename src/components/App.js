@@ -1,5 +1,5 @@
 
-import { useReducer } from 'react';
+import React, { useReducer } from 'react';
 import '../App.css';
 import DigitButton from './DigitButton';
 
@@ -21,7 +21,7 @@ switch(type){
     }
 }
 }
-const App=()=> {
+function App() {
   const [{currentOperand,previousOperand,operation},dispatch]=useReducer(reducer,{})
   
   dispatch({type:ACTIONS.ADD_DIGIT,payload:{digit:1}})
